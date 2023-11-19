@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 
+import 'details_page.dart';
+
 class Containers extends StatelessWidget {
   String text;
   Containers ({
@@ -88,47 +90,53 @@ Cards({
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-     width: 220,
-      padding: EdgeInsets.all(10),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-        Container(
-          height: 165,
-          width: 165,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(image),
-              fit: BoxFit.cover,
-            ),
-            borderRadius: BorderRadius.circular(10),
-            color: Colors.grey,
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withOpacity(0.5),
-                spreadRadius: 5,
-                blurRadius: 7,
-                offset: Offset(0, 3),
-              ),
-            ],
-          ),
-        ),
-        SizedBox(height: 10),
-        Text(
-          title,
-          style: TextStyle(fontSize: 15,fontWeight: FontWeight.w600, fontFamily: 'PTSans'),
-        ),
-        
-        Row(
+    return InkWell(
+      onTap: (){
+         Navigator.of(context).push(MaterialPageRoute(
+          builder: (context)=>DetailPage(image: image, title: title, price: price)));
+       },
+      child: Container(
+       width: 220,
+        padding: EdgeInsets.all(10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              price,
-              style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500, color: Colors.pink, fontFamily: 'PlayFair'),
+          Container(
+            height: 165,
+            width: 165,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(image),
+                fit: BoxFit.cover,
+              ),
+              borderRadius: BorderRadius.circular(10),
+              color: Colors.grey,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.5),
+                  spreadRadius: 5,
+                  blurRadius: 7,
+                  offset: Offset(0, 3),
+                ),
+              ],
             ),
-            
-          ],),
-        ],
+          ),
+          SizedBox(height: 10),
+          Text(
+            title,
+            style: TextStyle(fontSize: 15,fontWeight: FontWeight.w600, fontFamily: 'PTSans'),
+          ),
+          
+          Row(
+            children: [
+              Text(
+                price,
+                style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500, color: Colors.pink, fontFamily: 'PlayFair'),
+              ),
+              
+            ],),
+          ],
+        ),
       ),
     );
   }

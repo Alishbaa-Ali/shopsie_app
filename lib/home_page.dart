@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
           backgroundColor: Colors.white,
           toolbarHeight: 50,
           title: Wrap(
-            spacing: 2,
+            //spacing: 2,
             children: [
               // Padding(padding: EdgeInsets.only(left: 5)),
               SizedBox(width: 2,),
@@ -262,8 +262,10 @@ class HomePage extends StatelessWidget {
                         ),
                         SizedBox(height: 20,),
 
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                  Wrap(
+                    alignment: WrapAlignment.center,
+                    runSpacing: 10,
+                    //mainAxisAlignment: MainAxisAlignment.center,
                        children: [
                        Container(
                           height: 35,
@@ -324,20 +326,24 @@ class HomePage extends StatelessWidget {
                       fontFamily: 'PlayFair',
                       fontSize: 12,
                     ),),
-                    SizedBox(width: 160,),
+                    //SizedBox(width: 160,),
+                    Spacer(),
                     Text("Privacy & Cookies",
                     style: TextStyle(
                       color: Colors.white,
                       fontFamily: 'PlayFair',
                       fontSize: 12,
                     ),),
-                    SizedBox(width: 10,),
-                    Text("Ts&Cs",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontFamily: 'PlayFair',
-                      fontSize: 12,
-                    ),),
+                    //SizedBox(width: 10,),
+                    Spacer(),
+                    Expanded(
+                      child: Text("Ts&Cs",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'PlayFair',
+                        fontSize: 12,
+                      ),),
+                    ),
                   ],
                 ),
               ),
