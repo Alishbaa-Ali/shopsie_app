@@ -26,9 +26,9 @@ class MainPage extends StatelessWidget {
 
             SizedBox(height: 15,),
 
-            Text("The Best Way To Style Your Life.",
+            Text("The Best way to Style your Life.",
             style: TextStyle(
-              fontSize: 10,
+              fontSize: 15,
               color: Colors.grey,
               fontFamily: 'PlayFair',
             ),),

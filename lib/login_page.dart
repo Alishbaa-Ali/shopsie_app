@@ -17,15 +17,16 @@ class LoginPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+           Wrap(
+            //mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text("Welcome Back!\nGlad to See You, Again!",
               style: TextStyle(
                 fontFamily: 'DMSans',
                 fontSize: 30,
                 fontWeight: FontWeight.w400,
-              ),)
+              ),
+              )
             ],
            ),
 
@@ -33,6 +34,7 @@ class LoginPage extends StatelessWidget {
            Containers(text: "Enter your Email"),
            SizedBox(height: 20,),
            //Containers(text: "Enter your Password"),
+           
            Container(
               height: 40,
               width: 300,
@@ -98,14 +100,14 @@ class LoginPage extends StatelessWidget {
 
           SizedBox(height: 20,),
 
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          Wrap(
+            //mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text("Don't have an Account? ",
               style: TextStyle(
-                fontSize: 15,
+                fontSize: 16,
                 color: Colors.grey,
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.w600,     
               ),),
 
               TextButton(
@@ -113,7 +115,7 @@ class LoginPage extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 15,
                     color: Colors.blue,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w600,             
                   ),
                 ),
                  onPressed: () {

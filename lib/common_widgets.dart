@@ -231,6 +231,7 @@ class Details extends StatelessWidget {
     return Padding(
                 padding:EdgeInsets.only(left: 20),
                 child: Row(
+                  //runSpacing: 5,
                 children: [
                   Container(
                     width: 50,
@@ -256,11 +257,15 @@ class Details extends StatelessWidget {
                       )
                      ),
                      SizedBox(height: 5,),
-                      Text(text2,
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 10,
-                      )),
+                      Row(
+                        children: [
+                          Text(text2,
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 10,
+                          )),
+                        ],
+                      ),
                     ],
                   ),
                 ],
@@ -279,7 +284,8 @@ class Recommendations extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Wrap(
+      spacing: 5,
             children: [
             Text(text1,
             style: TextStyle(
@@ -287,13 +293,13 @@ class Recommendations extends StatelessWidget {
               fontSize: 12,
               fontWeight: FontWeight.w600,
             ),),
-            SizedBox(width: 13,),
+            //SizedBox(width: 10,),
             Text(text2,
             style: TextStyle(
               fontFamily: 'PTSans',
               fontSize: 12,
             ),),
-            SizedBox(width: 5,),
+            //SizedBox(width: 5,),
             Icon(Icons.keyboard_arrow_down_outlined, size: 12,),
            ],
         );

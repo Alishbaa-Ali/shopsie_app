@@ -15,7 +15,8 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.white,
           toolbarHeight: 50,
-          title: Row(
+          title: Wrap(
+            spacing: 2,
             children: [
               // Padding(padding: EdgeInsets.only(left: 5)),
               SizedBox(width: 2,),
@@ -29,9 +30,9 @@ class HomePage extends StatelessWidget {
              ),),
               SizedBox(width: 80,),
              Icon(Icons.search, color: Colors.black,),
-             SizedBox(width: 3,),
+             //SizedBox(width: 3,),
              Icon(Icons.shopping_cart_rounded, color: Colors.black,),
-             SizedBox(width: 3,),
+             //SizedBox(width: 3,),
              Icon(Icons.person_2_sharp, color: Colors.black,),
             //  Padding(padding: EdgeInsets.only(right: 5)),
             SizedBox(width: 2,),
@@ -53,6 +54,8 @@ class HomePage extends StatelessWidget {
               SizedBox(height: 20,),
 
               Wrap(
+                //spacing: 20,
+                runSpacing: 20,
                 children: [
                   Container(
                 height: 30,
@@ -124,13 +127,13 @@ class HomePage extends StatelessWidget {
               Heading(text: "RECOMMENDED LOOKS FOR YOU"),
               SizedBox(height: 25,),
 
-              Row(
+              Wrap(
+                 runSpacing: 10,
+                 spacing: 10,
                 children: [
-                  Padding(padding: EdgeInsets.all(10)),
-                  Recommendations(text1: "Gender:", text2: "Female"),
-                  SizedBox(width: 20,),
+                  //Padding(padding: EdgeInsets.all(10)),
+                  Recommendations(text1: "Gender:", text2: "Female"),      
                   Recommendations(text1: "Style:", text2: "PartyWear"),
-                  SizedBox(width: 20,),
                   Recommendations(text1: "Price Range:", text2: "All"),
                 ],
               ),
@@ -167,7 +170,7 @@ class HomePage extends StatelessWidget {
                           fontFamily: 'PTSans'
                         ),),
                       ),
-
+                      
                       Details(text1: "\$ 19.54", text2: "Carnation - Accent Pink Long Floral Dress", image: "assets/images/20.jpeg"),
                       Divider(),
                       Details(text1: "\$ 10.15", text2: "Sparkly Mid Length Earings", image: "assets/images/21.jpeg"),

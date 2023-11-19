@@ -16,8 +16,8 @@ class RegisterScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+           Wrap(
+            //mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text("  Hello!\n  Register To Get Started!",
               style: TextStyle(
@@ -81,12 +81,12 @@ class RegisterScreen extends StatelessWidget {
 
           SizedBox(height: 20,),
 
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          Wrap(
+            //mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text("Already Have an Account? ",
               style: TextStyle(
-                fontSize: 15,
+                fontSize: 16,
                 color: Colors.grey,
                 fontWeight: FontWeight.w600,
               ),),
