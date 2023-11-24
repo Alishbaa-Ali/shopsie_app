@@ -1,7 +1,14 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 // prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
+import 'package:shopify_app/AllCategories.dart';
+import 'package:shopify_app/accessories.dart';
+import 'package:shopify_app/bottoms.dart';
 import 'package:shopify_app/common_widgets.dart';
+import 'package:shopify_app/dress.dart';
+import 'package:shopify_app/heels.dart';
+import 'package:shopify_app/profile.dart';
+import 'package:shopify_app/shirts.dart';
 // import 'package:shopify_app/main_page.dart';
 
 class HomePage extends StatelessWidget {
@@ -13,32 +20,95 @@ class HomePage extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
+          leading: Builder(
+            builder: (context) {
+              return IconButton(
+                icon: Icon(Icons.menu,color: Colors.black,),
+                onPressed:() {
+                Scaffold.of(context).openDrawer();
+                },
+              );
+            }
+          ), 
           backgroundColor: Colors.white,
           toolbarHeight: 50,
-          title: Wrap(
-            //spacing: 2,
-            children: [
-              // Padding(padding: EdgeInsets.only(left: 5)),
-              SizedBox(width: 2,),
-              Icon(Icons.menu, color: Colors.black,),
-               SizedBox(width: 120,),
-             Text("Shopsie.",
-             style: TextStyle(
-              fontFamily: 'DancingScript',
-               color: Colors.pinkAccent,
-               fontWeight: FontWeight.bold,
-             ),),
-              SizedBox(width: 80,),
-             Icon(Icons.search, color: Colors.black,),
-             //SizedBox(width: 3,),
-             Icon(Icons.shopping_cart_rounded, color: Colors.black,),
-             //SizedBox(width: 3,),
-             Icon(Icons.person_2_sharp, color: Colors.black,),
-            //  Padding(padding: EdgeInsets.only(right: 5)),
-            SizedBox(width: 2,),
-            ],
+          title: Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(padding: EdgeInsets.all(15)),
+                SizedBox(width: 20,),
+                Text("Shopsie.",
+                style: TextStyle(
+                  fontFamily: 'DancingScript',
+                  color: Colors.pinkAccent,
+                  fontWeight: FontWeight.bold,
+                ),),
+                SizedBox(width: 20,),
+               Icon(Icons.search, color: Colors.black,),
+               Icon(Icons.shopping_cart_rounded, color: Colors.black,),
+               Icon(Icons.person_2_sharp, color: Colors.black,),
+              ],
+            ),
           )
         ),
+
+
+        drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.all(25),
+          children: [
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.white,
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  CircleAvatar(radius: 50,
+                  backgroundImage: AssetImage("assetName"),),
+                  SizedBox(width: 30),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Name",
+                      style: TextStyle(fontWeight: FontWeight.w600),),
+                      SizedBox(height: 5,),
+                      Text("data"),
+                    ],
+                  )
+                ],
+              ),
+            ),
+            SizedBox(height: 15,),
+            Text("Information",
+            style: TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+            ),),
+            SizedBox(height: 30,),
+            ListItem(icon: Icons.mode_edit_outline_outlined, text: "Edit Profile", destination: Profile()),
+            ListItem(icon: Icons.person_outline, text: "Username", destination: Profile(),),
+            ListItem(icon: Icons.email_outlined, text: "Email", destination: Profile(),),
+            ListItem(icon: Icons.lock_outline_rounded, text: "Password", destination: Profile(),),
+
+            SizedBox(height: 35,),
+            Text("Categories",
+            style: TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+            ),),
+            SizedBox(height: 30,),
+            ListItem(icon: Icons.window_rounded, text: "All Categories", destination: AllCategories()),
+            ListItemIcon(icon: "assets/images/shirt.png", text: "Shitrs", destination: Shirts(),),
+            ListItemIcon(icon: "assets/images/bottoms.png", text: "Bottoms", destination: Bottoms(),),
+            ListItemIcon(icon: "assets/images/dress.png", text: "Dresses", destination: Dress(),),
+            ListItemIcon(icon: "assets/images/heels.png", text: "Heels", destination: Heels(),),
+            ListItemIcon(icon: "assets/images/watch.png", text: "Accessories", destination: Accessories(),),
+              ],
+              ),
+              ),
 
         body: SingleChildScrollView(
           child: Column(

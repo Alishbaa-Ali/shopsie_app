@@ -83,6 +83,7 @@ class RegisterScreen extends StatelessWidget {
 
           Wrap(
             //mainAxisAlignment: MainAxisAlignment.center,
+            alignment: WrapAlignment.center,
             children: [
               Text("Already Have an Account? ",
               style: TextStyle(

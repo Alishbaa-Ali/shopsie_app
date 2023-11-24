@@ -19,6 +19,7 @@ class LoginPage extends StatelessWidget {
           children: [
            Wrap(
             //mainAxisAlignment: MainAxisAlignment.center,
+            alignment: WrapAlignment.center,
             children: [
               Text("Welcome Back!\nGlad to See You, Again!",
               style: TextStyle(
@@ -50,7 +51,7 @@ class LoginPage extends StatelessWidget {
                     color: Colors.black54,
                   ),),
                   SizedBox(width: 120,),
-                  Icon(Icons.visibility_off, color: Colors.grey,),
+                  Expanded(child: Icon(Icons.visibility_off, color: Colors.grey,)),
                 ],
               ),
             ),
@@ -87,6 +88,20 @@ class LoginPage extends StatelessWidget {
             color: Colors.grey,
             fontSize: 12,
           ),),
+
+          // Row(
+          //   children: [
+          //     Expanded(   
+          //       child: Text("____________________    Or Login With   ____________________",
+          //       textAlign: TextAlign.center,
+          //       style: TextStyle(
+          //         color: Colors.grey,
+          //         fontSize: 12,
+          //       ),),
+          //     ),
+          //   ],
+          // ),
+          
           SizedBox(height: 20,),
 
           Row(
