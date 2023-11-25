@@ -23,7 +23,7 @@ class Heels extends StatelessWidget {
               toolbarHeight: 50,
               centerTitle: true,
               title:
-              Text("HEELS",
+              Text("Heels",
                style: TextStyle(
                 fontFamily: 'DMSans',
                  color: Colors.black,
@@ -38,11 +38,11 @@ class Heels extends StatelessWidget {
           crossAxisSpacing: 15,
           mainAxisSpacing: 25,
           children: [       
-            GridCard(image: "assets/images/Heels (1).jpeg", title: "Heels 1", price: "\$ 12.99"),
-            GridCard(image: "assets/images/Heels (2).jpeg", title: "Heels 1", price: "\$ 12.99"),
-            GridCard(image: "assets/images/Heels (3).jpeg", title: "Heels 1", price: "\$ 12.99"),
-            GridCard(image: "assets/images/Heels (4).jpeg", title: "Heels 1", price: "\$ 12.99"),
-            GridCard(image: "assets/images/Heels (5).jpeg", title: "Heels 1", price: "\$ 12.99"),
+            GridCard(image: "assets/images/Heels (1).jpeg", title: "Olive Brown Heels", price: "\$ 14.99"),
+            GridCard(image: "assets/images/Heels (2).jpeg", title: "Pastel Green Heels", price: "\$ 22.93"),
+            GridCard(image: "assets/images/Heels (3).jpeg", title: "Dark Brown Heels", price: "\$ 11.61"),
+            GridCard(image: "assets/images/Heels (4).jpeg", title: "Wavy strap Heels", price: "\$ 14.39"),
+            GridCard(image: "assets/images/Heels (5).jpeg", title: "Lilac Heels", price: "\$ 21.69"),
           ],),
         ),
       ),

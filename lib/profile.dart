@@ -13,16 +13,21 @@ class Profile extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
+          leading: IconButton(onPressed:(){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomePage()),
+                  );
+                }, icon: Icon(Icons.arrow_back, color: Colors.black,),),
           backgroundColor: Colors.white,
           toolbarHeight: 50,
-          title: Center(
-            child: Text("Shopsie.",
-             style: TextStyle(
-              fontFamily: 'DancingScript',
-               color: Colors.pinkAccent,
-               fontWeight: FontWeight.bold,
-             ),),
-          ),
+          centerTitle: true,
+          title: Text("Shopsie.",
+           style: TextStyle(
+            fontFamily: 'DancingScript',
+             color: Colors.pinkAccent,
+             fontWeight: FontWeight.bold,
+           ),),
         ),
 
         body: Column(
@@ -36,7 +41,7 @@ class Profile extends StatelessWidget {
               style: TextStyle(
                 fontFamily: 'DMSans',
                 fontSize: 30,
-                fontWeight: FontWeight.w400,
+                fontWeight: FontWeight.w600,
               ),
               )
             ],

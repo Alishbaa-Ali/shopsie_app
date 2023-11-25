@@ -23,7 +23,7 @@ class Accessories extends StatelessWidget {
               toolbarHeight: 50,
               centerTitle: true,
               title:
-              Text("ACCESSORIES",
+              Text("Accessories",
                style: TextStyle(
                 fontFamily: 'DMSans',
                  color: Colors.black,
@@ -38,12 +38,12 @@ class Accessories extends StatelessWidget {
           crossAxisSpacing: 15,
           mainAxisSpacing: 25,
           children: [       
-            GridCard(image: "assets/images/Accessories (1).jpeg", title: "Accessories 1", price: "\$ 12.99"),
-            GridCard(image: "assets/images/Accessories (2).jpeg", title: "Accessories 1", price: "\$ 12.99"),
-            GridCard(image: "assets/images/Accessories (3).jpeg", title: "Accessories 1", price: "\$ 12.99"),
-            GridCard(image: "assets/images/Accessories (4).jpeg", title: "Accessories 1", price: "\$ 12.99"),
-            GridCard(image: "assets/images/Accessories (5).jpeg", title: "Accessories 1", price: "\$ 12.99"),
-            GridCard(image: "assets/images/Accessories (6).jpeg", title: "Accessories 1", price: "\$ 12.99"),
+            GridCard(image: "assets/images/Accessories (1).jpeg", title: "Beach Bracelet", price: "\$ 23.32"),
+            GridCard(image: "assets/images/Accessories (2).jpeg", title: "Sea Shells Bracelet", price: "\$ 12.54"),
+            GridCard(image: "assets/images/Accessories (3).jpeg", title: "Classic Black Bag", price: "\$ 10.43"),
+            GridCard(image: "assets/images/Accessories (4).jpeg", title: "Black Shades", price: "\$ 11.49"),
+            GridCard(image: "assets/images/Accessories (5).jpeg", title: "Sea Shell Earings", price: "\$ 9.12"),
+            GridCard(image: "assets/images/Accessories (6).jpeg", title: "Butterfly HairClaw", price: "\$ 18.99"),
             
           ],),
         ),

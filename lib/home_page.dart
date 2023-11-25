@@ -65,18 +65,23 @@ class HomePage extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  CircleAvatar(radius: 50,
-                  backgroundImage: AssetImage("assetName"),),
+                  Expanded(
+                    child: CircleAvatar(radius: 50,
+                    backgroundImage: AssetImage("assets/images/profile.jpeg"),),
+                  ),
                   SizedBox(width: 30),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("Name",
-                      style: TextStyle(fontWeight: FontWeight.w600),),
-                      SizedBox(height: 5,),
-                      Text("data"),
-                    ],
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Username Here",
+                        style: TextStyle(fontWeight: FontWeight.w600, fontFamily: 'DancingScript'),),
+                        SizedBox(height: 5,),
+                        Text("Email Here",
+                        style: TextStyle(fontWeight: FontWeight.w500, fontFamily: 'DMSans'),),
+                      ],
+                    ),
                   )
                 ],
               ),

@@ -23,7 +23,7 @@ class Dress extends StatelessWidget {
               toolbarHeight: 50,
               centerTitle: true,
               title:
-              Text("DRESS",
+              Text("Dress",
                style: TextStyle(
                 fontFamily: 'DMSans',
                  color: Colors.black,
@@ -38,12 +38,12 @@ class Dress extends StatelessWidget {
           crossAxisSpacing: 15,
           mainAxisSpacing: 25,
           children: [       
-            GridCard(image: "assets/images/7.jpeg", title: "Dress 1", price: "\$ 12.99"),
-            GridCard(image: "assets/images/2.jpeg", title: "Dress 1", price: "\$ 12.99"),
-            GridCard(image: "assets/images/3.jpeg", title: "Dress 1", price: "\$ 12.99"),
-            GridCard(image: "assets/images/4.jpeg", title: "Dress 1", price: "\$ 12.99"),
-            GridCard(image: "assets/images/5.jpeg", title: "Dress 1", price: "\$ 12.99"),
-            GridCard(image: "assets/images/6.jpeg", title: "Dress 1", price: "\$ 12.99"),
+            GridCard(image: "assets/images/7.jpeg", title: "Pink Floral Dress", price: "\$ 21.12"),
+            GridCard(image: "assets/images/2.jpeg", title: "Black Dress", price: "\$ 10.91"),
+            GridCard(image: "assets/images/3.jpeg", title: "Blue Silk Dress", price: "\$ 12.78"),
+            GridCard(image: "assets/images/4.jpeg", title: "Swan White Dress", price: "\$ 21.21"),
+            GridCard(image: "assets/images/5.jpeg", title: "Yellow Dress", price: "\$ 22.15"),
+            GridCard(image: "assets/images/6.jpeg", title: "Blue Fairy Gown", price: "\$ 11.98"),
             
           ],),
         ),

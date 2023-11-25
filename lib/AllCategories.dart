@@ -6,6 +6,7 @@ import 'package:shopify_app/accessories.dart';
 import 'package:shopify_app/common_widgets.dart';
 import 'package:shopify_app/dress.dart';
 import 'package:shopify_app/heels.dart';
+import 'package:shopify_app/home_page.dart';
 import 'package:shopify_app/shirts.dart';
 
 class AllCategories extends StatelessWidget {
@@ -17,16 +18,22 @@ class AllCategories extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
+          leading: IconButton(onPressed:(){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomePage()),
+                  );
+                }, icon: Icon(Icons.arrow_back, color: Colors.black,),),
           backgroundColor: Colors.white,
           toolbarHeight: 50,
           title: Row(
             children: [
               Padding(padding: EdgeInsets.all(6)),
-              Icon(Icons.arrow_back, color: Colors.black,),
-              Spacer(),
+              // Icon(Icons.arrow_back, color: Colors.black,),
+               Spacer(),
               Text("All Categories",
                style: TextStyle(
-                fontFamily: 'PTSans',
+                fontFamily: 'DMSans',
                  color: Colors.black,
                  fontSize: 20,
                  fontWeight: FontWeight.w600,

@@ -23,7 +23,7 @@ class Bottoms extends StatelessWidget {
               toolbarHeight: 50,
               centerTitle: true,
               title:
-              Text("BOTTOMS",
+              Text("Bottoms",
                style: TextStyle(
                 fontFamily: 'DMSans',
                  color: Colors.black,
@@ -38,12 +38,12 @@ class Bottoms extends StatelessWidget {
           crossAxisSpacing: 15,
           mainAxisSpacing: 25,
           children: [       
-            GridCard(image: "assets/images/Bottoms (1).jpeg", title: "Bottoms 1", price: "\$ 12.99"),
-            GridCard(image: "assets/images/Bottoms (2).jpeg", title: "Bottoms 1", price: "\$ 12.99"),
-            GridCard(image: "assets/images/Bottoms (3).jpeg", title: "Bottoms 1", price: "\$ 12.99"),
-            GridCard(image: "assets/images/Bottoms (4).jpeg", title: "Bottoms 1", price: "\$ 12.99"),
-            GridCard(image: "assets/images/Bottoms (5).jpeg", title: "Bottoms 1", price: "\$ 12.99"),
-            GridCard(image: "assets/images/Bottoms (6).jpeg", title: "Bottoms 1", price: "\$ 12.99"),
+            GridCard(image: "assets/images/Bottoms (1).jpeg", title: "Straight Black Pants", price: "\$ 12.99"),
+            GridCard(image: "assets/images/Bottoms (2).jpeg", title: "White Wide Leg Pants", price: "\$ 19.59"),
+            GridCard(image: "assets/images/Bottoms (3).jpeg", title: "Beige Pants", price: "\$ 19.99"),
+            GridCard(image: "assets/images/Bottoms (4).jpeg", title: "Black Pants", price: "\$ 13.99"),
+            GridCard(image: "assets/images/Bottoms (5).jpeg", title: "Dark Blue Pants", price: "\$ 11.89"),
+            GridCard(image: "assets/images/Bottoms (6).jpeg", title: "Off-White Pants", price: "\$ 10.65"),
             
           ],),
         ),
