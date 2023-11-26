@@ -68,9 +68,10 @@ class DetailPage extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'PTSans',
                   color: Colors.black,
-                  fontSize: 17,
-                  fontWeight: FontWeight.w400,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
                 ),),
+                
                 // Heading(text: "PRODUCT DETAILS"),
                 SizedBox(height: 100,),
                 Center(

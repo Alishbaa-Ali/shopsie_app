@@ -32,25 +32,38 @@ class HomePage extends StatelessWidget {
           ), 
           backgroundColor: Colors.white,
           toolbarHeight: 50,
-          title: Expanded(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Padding(padding: EdgeInsets.all(15)),
-                SizedBox(width: 20,),
-                Text("Shopsie.",
-                style: TextStyle(
-                  fontFamily: 'DancingScript',
-                  color: Colors.pinkAccent,
-                  fontWeight: FontWeight.bold,
-                ),),
-                SizedBox(width: 20,),
-               Icon(Icons.search, color: Colors.black,),
-               Icon(Icons.shopping_cart_rounded, color: Colors.black,),
-               Icon(Icons.person_2_sharp, color: Colors.black,),
-              ],
-            ),
-          )
+          //centerTitle: true,
+          title:
+              Row(
+                children: [
+                  // Spacer(),                
+                  Expanded(
+                    child: Row(
+                      children: [
+                        Text("Shopsie.",
+                        style: TextStyle(
+                          fontFamily: 'DancingScript',
+                          color: Colors.pinkAccent,
+                          fontWeight: FontWeight.bold,
+                        ),),
+                      ],
+                    ),
+                  ),
+                  
+                  Expanded(
+                    child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Icon(Icons.search_rounded, color: Colors.black,),
+                      SizedBox(width: 10,),
+                      Icon(Icons.shopping_cart_rounded, color: Colors.black,),
+                      SizedBox(width: 10,),
+                      Icon(Icons.person_2_sharp, color: Colors.black,),
+
+                    ],
+                  ))
+                ],
+              ),
         ),
 
 
@@ -75,8 +88,8 @@ class HomePage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Username Here",
-                        style: TextStyle(fontWeight: FontWeight.w600, fontFamily: 'DancingScript'),),
+                        Text("Username",
+                        style: TextStyle(fontWeight: FontWeight.w600, fontFamily: 'DancingScript',fontSize: 18),),
                         SizedBox(height: 5,),
                         Text("Email Here",
                         style: TextStyle(fontWeight: FontWeight.w500, fontFamily: 'DMSans'),),
@@ -126,38 +139,79 @@ class HomePage extends StatelessWidget {
 
               Heading(text: "TRENDING NOW"),
 
-              SizedBox(height: 20,),
+              // SizedBox(height: 20,),
 
-              Wrap(
-                //spacing: 20,
-                runSpacing: 20,
-                children: [
-                  Container(
-                height: 30,
-                width: 70,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                  //border: Border.all(color: Colors.black54),
-                  color: Colors.pinkAccent,
-                ),
-                  child: Center(
-                  child: Text("All",
-                  style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    color: Colors.white,                   
-                  ),)),
-               ),
-                  SizedBox(width: 10,),
-                  ColorContainer(text: "Dresses"),
-                  SizedBox(width: 10,),
-                  ColorContainer(text: "Accessories"),
-                  SizedBox(width: 10,),
-                  ColorContainer(text: "Scarfs"),
+              // Wrap(
+              //   //spacing: 20,
+              //   runSpacing: 20,
+              //   children: [
+              //     Container(
+              //   height: 30,
+              //   width: 70,
+              //   decoration: BoxDecoration(
+              //     borderRadius: BorderRadius.all(Radius.circular(10)),
+              //     //border: Border.all(color: Colors.black54),
+              //     color: Colors.pinkAccent,
+              //   ),
+              //     child: Center(
+              //     child: Text("All",
+              //     style: TextStyle(
+              //       fontWeight: FontWeight.w500,
+              //       color: Colors.white,                   
+              //     ),)),
+              //  ),
+              //     SizedBox(width: 10,),
+              //     // ColorContainer(text: "Dress", destination: Dress()),
+              //     // SizedBox(width: 10,),
+              //     // ColorContainer(text: "Shirts", destination: Shirts()),
+              //     // SizedBox(width: 10,),
+              //     // ColorContainer(text: "Heels", destination: Heels()),
                 
-                ],
+              //   ],
+              // ),
+
+              SingleChildScrollView(
+                padding: EdgeInsets.all(10),
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    InkWell(
+                      onTap: () {
+                         Navigator.push(context,
+                         MaterialPageRoute(builder: (context) => AllCategories()));
+                      },
+                      child: Container(
+                      height: 30,
+                      width: 70,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        //border: Border.all(color: Colors.black54),
+                        color: Colors.pinkAccent,
+                      ),
+                        child: Center(
+                        child: Text("All",
+                        style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      color: Colors.white,                   
+                        ),)),
+                     ),
+                    ),
+                  SizedBox(width: 10,),
+                  ColorContainer(text: "Dress", destination: Dress()),
+                  SizedBox(width: 10,),
+                  ColorContainer(text: "Shirts", destination: Shirts()),
+                  SizedBox(width: 10,),
+                  ColorContainer(text: "Bottoms", destination: Bottoms()),   
+                  SizedBox(width: 10,),  
+                  ColorContainer(text: "Dress", destination: Dress()),
+                  SizedBox(width: 10,),
+                  ColorContainer(text: "Accessories", destination: Accessories()),
+                  SizedBox(width: 10,),
+                  ],
+                ),
               ),
 
-              SizedBox(height: 20,),
+              //SizedBox(height: 20,),
 
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,

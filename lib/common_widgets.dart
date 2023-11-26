@@ -53,27 +53,35 @@ class MyIcon extends StatelessWidget {
 
 class ColorContainer extends StatelessWidget {
   String text;
+  final Widget destination;
    ColorContainer({
     required this.text,
+    required this.destination,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-                height: 30,
-                width: 90,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                  //border: Border.all(color: Colors.black54),
-                  color: Color.fromARGB(79, 95, 113, 122),
-                ),
-                child: Center(
-                  child: Text(text,
-                  style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black,                   
-                  ),)),
-               );
+    return InkWell(
+      onTap: (){
+        Navigator.push(context,
+        MaterialPageRoute(builder: (context) => destination));
+       },  
+      child: Container(
+                  height: 30,
+                  width: 90,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    //border: Border.all(color: Colors.black54),
+                    color: Color.fromARGB(79, 95, 113, 122),
+                  ),
+                  child: Center(
+                    child: Text(text,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black,                   
+                    ),)),
+                 ),
+    );
   }
 }
 
