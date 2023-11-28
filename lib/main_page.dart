@@ -56,7 +56,6 @@ class MainPage extends StatelessWidget {
               ),
             ),
           ),
-
           ],
         ),
       ),

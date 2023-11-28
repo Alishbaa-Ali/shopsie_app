@@ -115,6 +115,7 @@ class Grid extends StatelessWidget {
           child: GridView.count(crossAxisCount: 2,
           crossAxisSpacing:15,
           mainAxisSpacing: 15,
+          // childAspectRatio: 0.7,
           children: [     
             GridCardListView(image: "assets/images/Shirts (1).jpeg", title: "Shirts", destination: Shirts()),
             GridCardListView(image: "assets/images/Bottoms (1).jpeg", title: "Bottoms", destination: Bottoms()),

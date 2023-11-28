@@ -273,15 +273,11 @@ class Details extends StatelessWidget {
                       )
                      ),
                      SizedBox(height: 5,),
-                      Row(
-                        children: [
-                          Text(text2,
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 10,
-                          )),
-                        ],
-                      ),
+                      Text(text2,
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 10,
+                      )),
                     ],
                   ),
                 ],

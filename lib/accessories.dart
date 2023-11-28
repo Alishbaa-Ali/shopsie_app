@@ -37,6 +37,7 @@ class Accessories extends StatelessWidget {
           child: GridView.count(crossAxisCount: 2,
           crossAxisSpacing: 15,
           mainAxisSpacing: 25,
+          childAspectRatio: 0.7,
           children: [       
             GridCard(image: "assets/images/Accessories (1).jpeg", title: "Beach Bracelet", price: "\$ 23.32"),
             GridCard(image: "assets/images/Accessories (2).jpeg", title: "Sea Shells Bracelet", price: "\$ 12.54"),

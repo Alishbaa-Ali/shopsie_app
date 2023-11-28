@@ -39,6 +39,7 @@ class HomePage extends StatelessWidget {
                   // Spacer(),                
                   Expanded(
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Text("Shopsie.",
                         style: TextStyle(
@@ -476,8 +477,6 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-
-
             ],
                 
           ),

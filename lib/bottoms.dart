@@ -37,6 +37,7 @@ class Bottoms extends StatelessWidget {
           child: GridView.count(crossAxisCount: 2,
           crossAxisSpacing: 15,
           mainAxisSpacing: 25,
+          //childAspectRatio: 0.7,
           children: [       
             GridCard(image: "assets/images/Bottoms (1).jpeg", title: "Straight Black Pants", price: "\$ 12.99"),
             GridCard(image: "assets/images/Bottoms (2).jpeg", title: "White Wide Leg Pants", price: "\$ 19.59"),

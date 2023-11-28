@@ -37,6 +37,7 @@ class Heels extends StatelessWidget {
           child: GridView.count(crossAxisCount: 2,
           crossAxisSpacing: 15,
           mainAxisSpacing: 25,
+          childAspectRatio: 0.7,
           children: [       
             GridCard(image: "assets/images/Heels (1).jpeg", title: "Olive Brown Heels", price: "\$ 14.99"),
             GridCard(image: "assets/images/Heels (2).jpeg", title: "Pastel Green Heels", price: "\$ 22.93"),

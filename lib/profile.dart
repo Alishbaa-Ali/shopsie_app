@@ -89,7 +89,7 @@ class Profile extends StatelessWidget {
                 padding: EdgeInsets.all(8),
                 child: Row(
                   children: [
-                    Text("New Password",
+                    Text("New Password  ",
                     style: TextStyle(
                       color: Colors.black54,
                     ),),

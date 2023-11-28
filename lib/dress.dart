@@ -37,6 +37,7 @@ class Dress extends StatelessWidget {
           child: GridView.count(crossAxisCount: 2,
           crossAxisSpacing: 15,
           mainAxisSpacing: 25,
+          childAspectRatio: 0.7,
           children: [       
             GridCard(image: "assets/images/7.jpeg", title: "Pink Floral Dress", price: "\$ 21.12"),
             GridCard(image: "assets/images/2.jpeg", title: "Black Dress", price: "\$ 10.91"),
