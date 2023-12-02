@@ -90,10 +90,12 @@ class Cards extends StatelessWidget {
   String image;
   String price;
   String title;
+  String details;
 Cards({
     required this.image,
     required this.price,
     required this.title,
+    required this.details,
   });
 
   @override
@@ -101,7 +103,7 @@ Cards({
     return InkWell(
       onTap: (){
          Navigator.of(context).push(MaterialPageRoute(
-          builder: (context)=>DetailPage(image: image, title: title, price: price)));
+          builder: (context)=>DetailPage(image: image, title: title, price: price,details: details,)));
        },
       child: Container(
        width: 220,
@@ -449,11 +451,13 @@ class GridCard extends StatelessWidget {
   String image;
   String title;
   String price;
+  String details;
 
   GridCard({
     required this.image,
     required this.title,
     required this.price,
+    required this.details,
   });
 
   @override
@@ -461,7 +465,7 @@ class GridCard extends StatelessWidget {
     return GestureDetector(
       onTap: (){
          Navigator.of(context).push(MaterialPageRoute(
-          builder: (context)=>DetailPage(image: image, title: title, price: price)));
+          builder: (context)=>DetailPage(image: image, title: title, price: price, details: details,)));
        },
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

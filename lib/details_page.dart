@@ -8,11 +8,14 @@ class DetailPage extends StatelessWidget {
   String image;
   String title;
   String price;
+  String details;
 
   DetailPage({
     required this.image,
     required this.title,
-    required this.price
+    required this.price,
+    required this.details,
+
     });
  
 
@@ -71,6 +74,14 @@ class DetailPage extends StatelessWidget {
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
                 ),),
+                SizedBox(height: 13,),
+                Text(details,
+                style: TextStyle(
+                  fontFamily: 'PTSans',
+                  color: Colors.black,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                ),),
                 
                 // Heading(text: "PRODUCT DETAILS"),
                 SizedBox(height: 100,),
@@ -100,3 +111,43 @@ class DetailPage extends StatelessWidget {
     );
   }
 }
+
+// class DetailPage extends StatelessWidget {
+//   final Map<String, dynamic> product;
+
+//   const DetailPage({
+//     required this.product
+//     });
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text(product['name']),
+//       ),
+//       body: Padding(
+//         padding: const EdgeInsets.all(16.0),
+//         child: Column(
+//           crossAxisAlignment: CrossAxisAlignment.center,
+//           children: [
+//             Image.asset(
+//               product['imageUrl'],
+//               width: 150,
+//               height: 150,
+//             ),
+//             SizedBox(height: 20),
+//             Text(
+//               'Price: ${product['price']}',
+//               style: TextStyle(fontSize: 18),
+//             ),
+//             SizedBox(height: 10),
+//             Text(
+//               'Description: ${product['description']}',
+//               style: TextStyle(fontSize: 16),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }

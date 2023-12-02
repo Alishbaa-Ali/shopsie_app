@@ -1,3 +1,4 @@
+// ignore: file_names
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart'; 
@@ -7,6 +8,7 @@ import 'package:shopify_app/common_widgets.dart';
 import 'package:shopify_app/dress.dart';
 import 'package:shopify_app/heels.dart';
 import 'package:shopify_app/home_page.dart';
+//import 'package:shopify_app/jsondata.dart';
 import 'package:shopify_app/shirts.dart';
 
 class AllCategories extends StatelessWidget {
@@ -67,9 +69,27 @@ class AllCategories extends StatelessWidget {
             List(image: "assets/images/Accessories (2).jpeg", text: "Accessories", destination: Accessories()),
           ],
         ),
-      ),
-      
-    );
+
+      //JSON DATA
+
+      // body:  ListView.builder(
+      // itemCount: fashionData['names'].length,
+      // itemBuilder: (BuildContext context, int index) {
+      //   return ListTile(
+      //     leading: Image.asset(
+      //       fashionData['images'][index],
+      //       width: 30,
+      //       height: 30,
+      //     ),
+      //     title: Text(fashionData['names'][index]),
+      //     onTap: () {   
+      //     },
+      //   );
+      // },
+      // )
+
+        ),
+      );
   }
 }
 
@@ -128,3 +148,5 @@ class Grid extends StatelessWidget {
     );
   }
 }
+
+

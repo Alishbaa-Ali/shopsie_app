@@ -219,13 +219,13 @@ class HomePage extends StatelessWidget {
                 child: Row(
                   children: [
 
-                    Cards(image: "assets/images/2.jpeg", price: "\$ 13.45", title: "Black Floral Dress"),
-                    Cards(image: "assets/images/3.jpeg", price: "\$ 18.99", title: "Pink Fairy Gown"),
-                    Cards(image: "assets/images/4.jpeg", price: "\$ 17.95", title: "White Floral Gown"),
-                    Cards(image: "assets/images/5.jpeg", price: "\$ 20.45", title: "Sunflower Dress"),
-                    Cards(image: "assets/images/6.jpeg", price: "\$ 11.93", title: "Accent Blue Dress"),
-                    Cards(image: "assets/images/18.jpeg", price: "\$ 11.45", title: "silver Rose Dress"),
-                    Cards(image: "assets/images/17.jpeg", price: "\$ 13.45", title: "Black Swan Dress"),
+                    Cards(image: "assets/images/2.jpeg", price: "\$ 13.45", title: "Black Floral Dress",details: "Effortlessly chic, our long black dress exudes timeless sophistication, offering versatility and understated glamour for any occasion.",),
+                    Cards(image: "assets/images/3.jpeg", price: "\$ 18.99", title: "Pink Fairy Gown",details: "Embrace garden-inspired elegance with our pink floral dress, blooming with charm and grace, perfect for a romantic and feminine allure.",),
+                    Cards(image: "assets/images/4.jpeg", price: "\$ 17.95", title: "White Floral Gown",details: "Exude grace and charm in our White Floral Dress, adorned with delicate blooms that dance across a pristine canvas, offering an effortlessly elegant look perfect for any occasion",),
+                    Cards(image: "assets/images/5.jpeg", price: "\$ 20.45", title: "Sunflower Dress",details: "Radiate joy and warmth with our yellow sunflower dress, a vibrant statement of cheerfulness and style, perfect for sunny days.",),
+                    Cards(image: "assets/images/6.jpeg", price: "\$ 11.93", title: "Accent Blue Dress",details: "Channel whimsical enchantment with our blue accent dress, weaving magic and charm into your ensemble with its ethereal design and allure.",),
+                    Cards(image: "assets/images/18.jpeg", price: "\$ 11.45", title: "silver Rose Dress",details: "Radiate elegance in our Silver Rose Dress, a shimmering ensemble capturing the ethereal beauty of delicate petals, ensuring a captivating and glamorous presence at any affair",),
+                    Cards(image: "assets/images/17.jpeg", price: "\$ 13.45", title: "Black Swan Dress",details: "Embrace enchanting allure with our Black Swan Dress, a graceful ensemble that exudes sophistication and mystery, perfect for making a dramatic statement at special occasions.",),
                     
                   ],
                 ),
